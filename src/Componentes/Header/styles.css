@@ -1,0 +1,28 @@
+
+.header{
+    background-color: black;
+}
+.login{
+    background-color: white;
+    color: black;
+    width: 100px;
+    height: 30px;
+    border-radius: 15px;
+    font-weight: bold;
+ 
+}
+.homePage{
+    color: white;
+    font-weight: bold;
+    
+}
+.homePage:hover{
+    color: white;
+}
+.login:hover{
+    background-color: white;
+}
+.imgFundo{
+    position: absolute;
+    z-index: -1;
+}
