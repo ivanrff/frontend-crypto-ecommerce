@@ -1,9 +1,19 @@
+.colLogin {
+    align-items: center;
+    display: flex;
+}
+
 .contLogin{
     width: 350px;
     background-color: #E2E2E2;
     border-radius: 25px;
     border: 4px solid black;
+    margin: auto;
+    height:350px;
+    padding: 20px;
+    width: 350px;
 }
+
 .btnLogin {
     width: 100%;
     height: 35px;

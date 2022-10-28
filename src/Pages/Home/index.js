@@ -1,21 +1,24 @@
 import Header from "../../Componentes/Header";
-import fundo from "../../imagens/fundo.png"
+import fundo from "../../imagens/fundo.jpg"
 import Login from "../../Componentes/Login";
+import SrStonks from "../../imagens/SrStonks.png";
 import "./styles.css"
 const Home = () => {
     return (
-        <>
-            <Header/>
-            <img className="imgFundo" src={fundo} alt="" width="100%" height="100%"/>
-            <div className="contHome container">
-                <div className="row">
-                    <div className="col-md-7"></div>
-                    <div className="col-md-5">
-                        <Login/>
+        <>  
+
+                <Header/>
+                <img className="imgFundo" src={fundo} alt=""/>
+                <div className="container">
+                    <div className="rowHome row">
+                        <div className="col colStonks">
+                            <img className="srStonks" src={SrStonks} alt=""/>
+                        </div>
+                        <div className="col colLogin">
+                            <Login/>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
 
             
 
