@@ -4,7 +4,7 @@ import fundo from "../../imagens/fundo.jpg"
 import FormularioCadastro from "../../Componentes/FormularioCadastro"
 import SrStonks from "../../imagens/SrStonks.png";
 import "./styles.css"
-const Home = () => {
+const Cadastro = () => {
     return (
         <>  
                 <div className="main">
@@ -29,4 +29,4 @@ const Home = () => {
         </>
     )
 }
-export default Home;
+export default Cadastro;
