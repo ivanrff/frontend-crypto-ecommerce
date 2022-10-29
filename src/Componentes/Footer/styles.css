@@ -1,7 +1,22 @@
 .footer{
-    background-color: black;
+    background-color: #595555;
     position: absolute;
     width: 100%;
     bottom: 0;
     height: 100px; /*remover*/
+}
+.textFooter{
+    font-size: 25px;
+    color: white;
+}
+.ancorasSites{
+    color: white;
+}
+.ancorasSites:hover{
+    color: black;
+}
+.tituloPag{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
 }

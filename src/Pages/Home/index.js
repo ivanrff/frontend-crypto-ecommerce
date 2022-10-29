@@ -12,7 +12,7 @@ const Home = () => {
 
                 <Header/>
                 <img className="imgFundo" src={fundo} alt=""/>
-                <div className="container">
+                <div className="container1 container">
                     <div className="rowHome row">
                         <div className="col colStonks">
                             <img className="srStonks" src={SrStonks} alt=""/>

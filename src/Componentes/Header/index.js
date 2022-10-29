@@ -18,7 +18,7 @@ const Header = () => {
           </Nav>
           <Nav.Link
             className="login btn  btn-outline me-5"
-            href="/login"
+            href="/cadastro"
           >
             Cadastrar{" "}
           </Nav.Link>
