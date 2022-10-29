@@ -6,7 +6,6 @@ import "./styles.css"
 const Home = () => {
     return (
         <>  
-
                 <Header/>
                 <img className="imgFundo" src={fundo} alt=""/>
                 <div className="container">
@@ -19,10 +18,6 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-
-            
-
-            
         </>
     )
 }
