@@ -1,3 +1,4 @@
+import Footer from "../../Componentes/Footer";
 import Header from "../../Componentes/Header";
 import fundo from "../../imagens/fundo.jpg"
 import Login from "../../Componentes/Login";
@@ -6,7 +7,7 @@ import "./styles.css"
 const Home = () => {
     return (
         <>  
-
+                <div className="main">
                 <Header/>
                 <img className="imgFundo" src={fundo} alt=""/>
                 <div className="container">
@@ -18,6 +19,8 @@ const Home = () => {
                             <Login/>
                         </div>
                     </div>
+                </div>
+                <Footer/>
                 </div>
 
             
