@@ -1,11 +1,12 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Home from './Pages/Home';
+import Cadastro from './Pages/Cadastro';
+// import Home from './Pages/Home';
 
 function App() {
   return (
    <>
-    <Home/>
+    <Cadastro/>
    </>
   );
 }

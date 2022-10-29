@@ -1,0 +1,35 @@
+.srStonks {
+    max-width: 100%;
+    max-height: 100vh;
+}
+
+.colStonks {
+    align-items: flex-end;
+    display: flex;
+    margin-left: 5vw;
+}
+
+@media (max-width: 870px) {
+    @media (min-width:440px) {
+        .contLogin {
+            position: absolute;
+            top: 50%;
+            right: 10vw;
+            transform: translate(0, -50%)
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    .colStonks {
+        display: none;
+    }
+}
+
+.rowHome {
+    height: 100vh;
+}
+
+.contLogin {
+    margin: auto;
+}
