@@ -6,54 +6,78 @@ const Login = () => {
       <div className="contCadastro container">
         <div className="row">
           <div className="col">
-            <h3 className="text-center">Venha ser Stonks com a gente!</h3>
+            <p className="text-center slogan">Venha ser Stonks com a gente!</p>
           </div>
         </div>
         <div className="row">
           <div className="col">
             <form>
 
-              <div class="row-input">
+            <div className="row-input1">
+              <div class="col-input">
                 <input id="usuarioCadastro" className="form-control cadastro-input"  placeholder="Nome"/>
               </div>
+            </div>
 
-              <div class="row-input">
+            <div className="row-input1">
+              <div class="col-input">
                 <input id="emailCadastro" className="form-control cadastro-input" placeholder="E-mail"/>
               </div>
+            </div>
+              
+              <div className="row-input2">
+                <div class="col-input">
+                  <input id="telefoneCadastro" className="form-control cadastro-input" placeholder="Telefone"/>
+                </div>
 
-              <div class="row-input">
-                <input id="telefoneCadastro" className="form-control cadastro-input" placeholder="Telefone"/>
+                <div class="col-input">
+                  <input id="cpfCadastro" className="form-control cadastro-input" placeholder="CPF"/>
+                </div>
+              </div>
+              
+              <div className="row-input3">
+                <div class="col-input">
+                  <input id="cepCadastro" className="form-control cadastro-input" placeholder="CEP"/>
+                </div>
+
+                <div class="col-input">
+                  <input id="ufCadastro" className="form-control cadastro-input" placeholder="UF"/>
+                </div>
               </div>
 
-              <div class="row-input">
-                <input id="cpfCadastro" className="form-control cadastro-input" placeholder="CPF"/>
+              <div className="row-input1">
+                <div class="col-input">
+                  <input id="cidadeCadastro" className="form-control cadastro-input" placeholder="Cidade"/>
+                </div>
               </div>
 
-              <div class="row-input">
-                <input id="cepCadastro" className="form-control cadastro-input" placeholder="CEP"/>
+              <div className="row-input3">
+                <div class="col-input">
+                  <input id="bairroCadastro" className="form-control cadastro-input" placeholder="Bairro"/>
+                </div>
+
+                <div class="col-input">
+                  <input id="numCadastro" className="form-control cadastro-input" placeholder="Nº"/>
+                </div>
               </div>
 
-              <div class="row-input">
-                <input id="cidadeCadastro" className="form-control cadastro-input" placeholder="Cidade"/>
+              <div className="row-input1">
+                <div class="col-input">
+                  <input id="senhaCadastro" className="form-control cadastro-input" placeholder="Senha"/>
+                </div>
               </div>
 
-              <div class="row-input">
-                <input id="bairroCadastro" className="form-control cadastro-input" placeholder="Bairro"/>
+              <div className="row-input1">
+                <div class="col-input">
+                  <input id="confirmeSenhaCadastro" className="form-control cadastro-input" placeholder="Confirme a Senha"/>
+                </div>
               </div>
 
-              <div class="row-input">
-                <input id="numCadastro" className="form-control cadastro-input" placeholder="Nº"/>
+              <div className="row-input1">
+                <div class="col-input">
+                  <button type="button" className="btnCadastro" >Cadastrar</button>
+                </div>
               </div>
-
-              <div class="row-input">
-                <input id="senhaCadastro" className="form-control cadastro-input" placeholder="Senha"/>
-              </div>
-
-              <div class="row-input">
-                <input id="confirmeSenhaCadastro" className="form-control cadastro-input" placeholder="Confirme a Senha"/>
-              </div>
-
-              <button type="button" className="btnCadastro" >Cadastrar</button>
 
             </form>
           </div>

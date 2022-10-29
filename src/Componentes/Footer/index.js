@@ -13,7 +13,7 @@ const Footer = () => {
         <>
       <div className="footer ">
         <div className="container">
-            <div className="row ">
+            <div className="row">
                 <div className="col-sm-1 mt-4 ">  
                     <a className='ancorasSites' href="https://www.facebook.com/" target="_blank" >
                         <BsFacebook size={40} />
@@ -32,7 +32,7 @@ const Footer = () => {
                 <div className="textFooter col-sm-6 text-center mt-4">© 2022 - PauloStonks</div>
                 <div className="col-sm-3 text-center">
                     <label htmlFor="" className='tituloPag'>Pagamentos</label>
-                    <img src={pagamentos} alt="" />
+                    <img id="cartoes-credito" src={pagamentos} alt="" />
                 </div>
             </div>
         </div>

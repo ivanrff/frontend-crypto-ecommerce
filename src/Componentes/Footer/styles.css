@@ -3,7 +3,7 @@
     position: absolute;
     width: 100%;
     bottom: 0;
-    height: 100px; /*remover*/
+    height: 80px;
 }
 .textFooter{
     font-size: 25px;
@@ -19,4 +19,7 @@
     font-size: 20px;
     font-weight: bold;
     color: white;
+}
+#cartoes-credito {
+    width:70%;
 }

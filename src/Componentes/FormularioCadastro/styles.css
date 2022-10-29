@@ -11,6 +11,7 @@
     margin: auto;
     height:fit-content;
     padding: 20px;
+    padding-top:10px;
 }
 
 .btnCadastro {
@@ -21,4 +22,28 @@
     border-radius: 5px;
     box-shadow: 0px 6px 5px 0px rgba(110,100,110,0.74);
 
+}
+
+.row-input1, .row-input2, .row-input3 {
+    display: grid;
+}
+.row-input3 {
+    grid-template-columns: 2fr 1fr;
+}
+
+.col-input {
+    margin: 3px;
+
+}
+#confirmeSenhaCadastro {
+    margin-bottom: 4px;
+}
+
+.cadastro-input {
+    font-size: small;
+}
+
+.slogan {
+    font-size:medium;
+    margin-bottom: 0.5rem;
 }
