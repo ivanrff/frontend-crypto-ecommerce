@@ -1,3 +1,8 @@
+.main {
+    height: 100vh;
+    position: relative;
+}
+
 .header{
     background-color: black;
     position: absolute;
