@@ -1,13 +1,11 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-/* import Rotas from './Routes'; */
-import Painel from './Pages/Painel';
+import Rotas from './Routes';
 
 function App() {
   return (
    <>
-    {/* <Rotas/> */}
-      <Painel />
+    <Rotas/>
    </>
   );
 }

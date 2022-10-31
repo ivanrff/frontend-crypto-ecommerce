@@ -17,8 +17,15 @@ const Painel = () => {
               <img className="srStonks" src={SrStonks} alt="" />
             </div>
             <div className="col colCadastro col-box">
-              <div className="box">
-              <button type="button" className="btn-box" >Cadastrar</button>
+              <div id="resumo-carteira" className="box">
+                <div>$PLC</div><div>Adicionar Fundos</div>
+                <div>0,00000</div>
+              </div>
+              <div id="resumo-historico" className="box">
+                <div>Atividades Recentes</div>
+                <div>atividade1</div>
+                <div>atividade2</div>
+                <div>exibir tudo</div>
               </div>
             </div>
           </div>
