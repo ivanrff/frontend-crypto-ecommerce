@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "../Pages/Home";
 import Cadastro from "../Pages/Cadastro";
+import Painel from "../Pages/Painel";
 import { AuthContext } from "../Context/auth";
 //import ProtectedRoutes from "../ProtectedRoutes";
 
@@ -22,12 +23,13 @@ const Rotas = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
-        <Route path="/cadastro" element = {<Cadastro/>}/>
+          <Route path="/cadastro" element={<Cadastro />} />
+          <Route path="/painel" element={<Painel />} />
 
           {usuario && <Route path="/Home" element={<Home />} />}
           <Route
             path="*"
-            element={usuario ? <Home/> : <Navigate to="/home" />}
+            element={usuario ? <Home /> : <Navigate to="/home" />}
           />
         </Routes>
       </AuthContext.Provider>
