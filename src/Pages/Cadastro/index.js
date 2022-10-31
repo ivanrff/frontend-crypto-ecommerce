@@ -4,7 +4,10 @@ import fundo from "../../imagens/fundo.jpg"
 import FormularioCadastro from "../../Componentes/FormularioCadastro"
 import SrStonks from "../../imagens/SrStonks.png";
 import "./styles.css"
+
 const Cadastro = () => {
+
+
     return (
         <>  
                 <div className="main">
