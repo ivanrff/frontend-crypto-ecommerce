@@ -12,7 +12,7 @@ const Login = () => {
     const [cidade, setCidade] = useState("");
     const [bairro, setBairro] = useState("");
     const [uf, setUf] = useState("");
-    const [numero, setNumero] = useState("");
+    const [numeroResidencial, setNumeroResidencial] = useState("");
     const [perfil, setPerfil] = useState({"id": "2"});
     const [senha, setSenha] = useState("");
     const [senha2, setSenha2] = useState("");
@@ -23,7 +23,7 @@ const Login = () => {
 
         if (nome === "" || cpf === "" || email === "" ||
          cartaoCredito === "" || rua === " " || cidade === '' ||
-         bairro === "" || uf === ""  ) {
+         bairro === "" || uf === "" || numeroResidencial === ""|| senha === "" ) {
             return alert("PREENCHA TODOS OS CAMPOS")
         }
 
@@ -31,18 +31,18 @@ const Login = () => {
    
             nome: nome,
             cpf: cpf,
-            // email: email,
+             email: email,
             cartaoCredito: cartaoCredito,
             rua: rua,
             cidade: cidade,
             bairro: bairro,
             uf: uf,
-            // numero, numero,
+            numeroResidencial: numeroResidencial,
             perfil: perfil,
-            // senha: senha
+            senha: senha
         }
 
-        if(senha!= senha2){
+        if(senha !== senha2){
           return alert("Senhas diferentes. Preencha corretamente!")
         }
 
@@ -57,7 +57,7 @@ const Login = () => {
         setCidade("")
         setBairro("")
         setUf("")
-        setNumero("")
+        setNumeroResidencial("")
         setSenha("")
         setSenha2("")
  
@@ -89,7 +89,7 @@ const Login = () => {
               
               <div className="row-input2">
                 <div class="col-input">
-                  <input id="telefoneCadastro" className="form-control cadastro-input" placeholder="Cartao Credito" value={cartaoCredito} onChange={(e) => setCartaoCredito(e.target.value)}/>
+                  <input id="cartaoCreditoCadastro" className="form-control cadastro-input" placeholder="Cartao Credito" value={cartaoCredito} onChange={(e) => setCartaoCredito(e.target.value)}/>
                 </div>
 
                 <div class="col-input">
@@ -118,9 +118,9 @@ const Login = () => {
                   <input id="bairroCadastro" className="form-control cadastro-input" placeholder="Bairro" value={bairro} onChange={(e) => setBairro(e.target.value)}/>
                 </div>
 
-                {/* <div class="col-input">
-                  <input id="numCadastro" className="form-control cadastro-input" placeholder="Nº"/>
-                </div> */}
+                <div class="col-input">
+                  <input id="numCadastro" className="form-control cadastro-input" placeholder="Nº" value={numeroResidencial} onChange={(e) => setNumeroResidencial(e.target.value)}/>
+                </div>
               </div>
 
               <div className="row-input1">
