@@ -1,5 +1,4 @@
 .srStonks-carteira {
-    align-self: flex-end;
     position: absolute;
     z-index: -1;
 }
@@ -20,4 +19,14 @@
 .box-carteira-saldo > .item-a {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+.box-carteira-saldo > .item-b {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+@media (max-width:645px) {
+    .col-box-carteira { width: 100% }
+    .srStonks-carteira {display:none}
 }

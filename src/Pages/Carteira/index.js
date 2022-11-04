@@ -8,10 +8,11 @@ const Carteira = () => {
   return (
     <>
       <div className="main">
-        <Header pages={["", "", "", "", "none", "none"]} />
+        <Header pages={["", "", "", "none", "", "none"]} />
         <img className="imgFundo" src={fundo} alt="" />
         <img className="srStonks srStonks-carteira" src={SrStonks} alt="" />
         <div className="container-carteira">
+          
           <div className="col-box col-box-carteira">
             <div className="box box-carteira-saldo">
               <div className="item-a">
