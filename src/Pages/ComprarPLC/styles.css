@@ -3,11 +3,54 @@
     padding-bottom: 80px;
     height: 100vh;
 }
-.srStonks-comprarplc {
-    width: 50%;
-    height: 50%;
-    object-fit: cover;
-}
 .row-comprarplc{
     height: 50%;
+}
+.row-comprarplc > .colStonks  > .srStonks-comprarplc {
+    position: absolute;
+    z-index: -1;
+    margin-left: -15%;
+    object-fit: cover;
+    max-height: 50vh;
+}
+.valorplc-comprarplc {
+    display: flex;
+    flex-direction: column;
+}
+.valorplc-comprarplc-a {
+    display: flex;
+    justify-content: space-between;
+}
+
+.valorplc-comprarplc-c, .valorplc-comprarplc-b {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.valorplc-comprarplc-b {
+    font-size: 2em;
+}
+.valorplc-comprarplc-c {
+    color: rgb(2, 164, 21);
+}
+
+#valorplc-comprarplc {
+    width: 100%;
+}
+.comprar-comprarplc-a, .comprar-comprarplc-b {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.comprar-comprarplc-c {
+    padding: 5px 5px 0 5px;
+}
+.comprar-input {
+    margin: 5px 5px 5px 5px;
+}
+#comprar-comprarplc {
+    padding: 10px 15px 20px 15px
+}
+.btn-comprarplc {
+    width: 100%;
 }

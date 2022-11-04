@@ -3,7 +3,6 @@ import Header from "../../Componentes/Header";
 import fundo from "../../imagens/fundo.jpg"
 import FormularioCadastro from "../../Componentes/FormularioCadastro"
 import SrStonks from "../../imagens/SrStonks.png";
-import "../../CSS-globais/box-conteudo.css";
 import "./styles.css"
 
 const Cadastro = () => {

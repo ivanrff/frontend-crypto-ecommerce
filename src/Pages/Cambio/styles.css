@@ -1,0 +1,30 @@
+.container-cambio {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+}
+.srStonks-cambio {
+    align-self: flex-end;
+    position: absolute;
+    max-height: 80vh;
+    z-index: -1;
+    margin-left: -100px;
+}
+.col-box-cambio {
+    width: 100%;
+}
+.box-cambio {
+    margin: auto;
+}
+.cabecalho-cambio {
+    padding: 0 20px 0;
+}
+.moedas-cambio {
+    max-height: 60vh;
+    overflow-y: scroll;
+    padding: 0 20px 0;
+}
+.moeda-row {
+    margin-top: 15px;
+}
