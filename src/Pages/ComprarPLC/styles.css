@@ -1,0 +1,13 @@
+.container-comprarplc {
+    padding-top: 100px;
+    padding-bottom: 80px;
+    height: 100vh;
+}
+.srStonks-comprarplc {
+    width: 50%;
+    height: 50%;
+    object-fit: cover;
+}
+.row-comprarplc{
+    height: 50%;
+}

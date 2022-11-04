@@ -31,7 +31,7 @@ const Login = () => {
    
             nome: nome,
             cpf: cpf,
-             email: email,
+            email: email,
             cartaoCredito: cartaoCredito,
             rua: rua,
             cidade: cidade,

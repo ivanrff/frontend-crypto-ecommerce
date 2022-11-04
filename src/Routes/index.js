@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "../Pages/Home";
 import Cadastro from "../Pages/Cadastro";
 import Painel from "../Pages/Painel";
+import ComprarPLC from "../Pages/ComprarPLC";
 import { AuthContext } from "../Context/auth";
 //import ProtectedRoutes from "../ProtectedRoutes";
 
@@ -25,6 +26,7 @@ const Rotas = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/cadastro" element={<Cadastro />} />
           <Route path="/painel" element={<Painel />} />
+          <Route path="/comprar-plc" element={<ComprarPLC />} />
 
           {usuario && <Route path="/Home" element={<Home />} />}
           <Route

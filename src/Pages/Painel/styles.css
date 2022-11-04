@@ -29,7 +29,62 @@
 .rowHome {
     height: 100vh;
 }
-
+.rowPainel {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
 .contLogin {
     margin: auto;
+}
+
+.col-painel {
+    display: grid;
+    grid-template-rows: min-content min-content;
+    margin-top: 130px;
+    margin-bottom: 100px;
+}
+
+#resumo-carteira, #resumo-historico {
+    width: 300px;
+    display: grid;
+}
+
+#resumo-carteira {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content;
+    
+}
+.resumo-carteira-c {
+    justify-self: end;
+    grid-row: 2 / 3;
+    grid-column: 1 /3;
+    font-size: 3em;
+}
+.resumo-carteira-b, #resumo-historico-exibirtudo {
+    justify-self: end;
+}
+
+#resumo-historico {
+    grid-template-rows: min-content min-content min-content min-content;
+    padding: 10px 15px 10px 15px;
+    margin-top: 50px;
+}
+#resumo-historico-titulo {
+    margin-bottom: 5px;
+}
+#resumo-historico-exibirtudo {
+    margin-top: 5px;
+}
+.resumo-atividades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: aliceblue;
+    margin: 5px 0 5px 0;
+    padding: 5px 10px 5px 10px;
+    border-radius: 0.8em;
+}
+.resumo-qtd {
+    justify-self: end;
+    margin-bottom: 5px;
 }

@@ -3,6 +3,7 @@ import Header from "../../Componentes/Header";
 import fundo from "../../imagens/fundo.jpg"
 import FormularioCadastro from "../../Componentes/FormularioCadastro"
 import SrStonks from "../../imagens/SrStonks.png";
+import "../../CSS-globais/box-conteudo.css";
 import "./styles.css"
 
 const Cadastro = () => {
@@ -11,7 +12,7 @@ const Cadastro = () => {
     return (
         <>  
                 <div className="main">
-                <Header/>
+                <Header pages={["","","","","",""]}/>
                 <img className="imgFundo" src={fundo} alt=""/>
                 <div className="container">
                     <div className="rowHome row">

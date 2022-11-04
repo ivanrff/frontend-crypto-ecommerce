@@ -3,6 +3,7 @@ import Header from "../../Componentes/Header";
 import fundo from "../../imagens/fundo.jpg"
 import Login from "../../Componentes/Login";
 import SrStonks from "../../imagens/SrStonks.png";
+import "../../CSS-globais/box-conteudo.css";
 import "./styles.css"
 const Home = () => {
     return (
@@ -10,7 +11,7 @@ const Home = () => {
 
                 <div className="main">
 
-                <Header/>
+                <Header pages={["none","none","none","none","none",""]}/>
                 <img className="imgFundo" src={fundo} alt=""/>
                 <div className="container1 container">
                     <div className="rowHome row">
