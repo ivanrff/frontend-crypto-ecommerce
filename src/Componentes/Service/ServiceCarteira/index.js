@@ -2,7 +2,7 @@ import api from "../api";
 
 
   export const putCarteira = (id, carteiraAtlz) => {
-    return api.put(`/carteiras/id=${id}`,{carteiraAtlz }).then((response) => response.data);
+    return api.put(`/carteiras/${1}`,carteiraAtlz).then((response) => response.data);
   };
   
   // export const deleteUsuario = (id) => {

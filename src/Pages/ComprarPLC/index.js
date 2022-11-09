@@ -12,29 +12,36 @@ const ComprarPLC = () => {
 
   const [qtdPauloCoin, setQtdPauloCoin] = useState(0);
   const [totalReais, setTotalReais] = useState(0);
-  const [carteira, setCarteira] = useState({});
-  const [pauloCoin, setPauloCoin] = useState({})
+  const [carteira, setCarteira] = useState("");
+  const [pauloCoin, setPauloCoin] = useState(0)
+  const [idPlc, setIdPlc] = useState({"id": 1})
 
   //resolver o problema do id fixo tanto para buscar de carteira por usuario, quanto para busca de paulo coin por id
   useEffect(() => {
-    setCarteira(getCarteiraByUsuarioId(7).then().catch());
-    console.log("carteira", getCarteiraByUsuarioId(7).then())
-    setPauloCoin(getPauloCoin(1).then().catch());
-    console.log(getPauloCoin(1).then().catch()) 
+    getPauloCoin(1).then((response)=> 
+    setPauloCoin(response.precoReal)
+    ).catch()
+    getCarteiraByUsuarioId(7).then((response)=>
+    setCarteira(response)
+    ).catch();
+    
   }, []);
-
+  
   useEffect(()=>{
-    setTotalReais(pauloCoin.precoReal);
-  },[qtdPauloCoin])
+    setTotalReais(pauloCoin*qtdPauloCoin);
+  },[qtdPauloCoin]);
+
+  
 
   const editarCarteira = () => {
+
+    console.log(carteira.qtdPauloCoin + qtdPauloCoin)
 
     const carteiraEditada= {
    
       qtdPauloCoin: (carteira.qtdPauloCoin + qtdPauloCoin),
-      totalReais: totalReais,
-      pauloCoin: carteira.pauloCoin,
-      usuario: carteira.usuario
+      totalReais: String(totalReais),
+      pauloCoin: idPlc
      
   }
     putCarteira(carteira.id, carteiraEditada)
