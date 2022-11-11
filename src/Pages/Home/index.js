@@ -10,7 +10,7 @@ const Home = () => {
 
                 <div className="main">
 
-                <Header pages={["none","none","none","none","none",""]}/>
+                <Header page="home"/>
                 <img className="imgFundo" src={fundo} alt=""/>
                 <div className="container1 container">
                     <div className="rowHome row">

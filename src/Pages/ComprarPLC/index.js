@@ -1,105 +1,28 @@
-import { useState, useEffect } from "react";
+
 import Footer from "../../Componentes/Footer";
 import Header from "../../Componentes/Header";
 import fundo from "../../imagens/fundo.jpg";
 import SrStonks from "../../imagens/SrStonks.png";
 import "./styles.css";
-import { getCarteiraByUsuarioId } from "../../Componentes/Service/ServiceCarteira";
-import { putCarteira } from "../../Componentes/Service/ServiceCarteira";
-import { getPauloCoin } from "../../Componentes/Service/ServicePauloCoin";
+
+import CotacaoPLC from "../../Componentes/CotacaoPLC";
+import CompraPLC from "../../Componentes/CompraPLC";
+import GraficoPLC from "../../Componentes/GraficoPLC";
 
 const ComprarPLC = () => {
-
-  const [qtdPauloCoin, setQtdPauloCoin] = useState("");
-  const [totalReais, setTotalReais] = useState(0);
-  const [carteira, setCarteira] = useState("");
-  const [pauloCoin, setPauloCoin] = useState(0);
-  //acertar os id´s, transformar tudo pra automatico após o acesso com senha e login 
-  const [idPlc, setIdPlc] = useState({"id": 1});
-  const [idUser, setIdUser] = useState({"id": 14});
-  const [valorTeste, setValorTeste] = useState("")
-
-  //resolver o problema do id fixo tanto para buscar de carteira por usuario, quanto para busca de paulo coin por id
-  useEffect(() => {
-    getPauloCoin(1).then((response)=> 
-    setPauloCoin(response.precoReal)
-    ).catch()
-    getCarteiraByUsuarioId(14).then((response)=>{
-      setValorTeste(response.qtdPauloCoin)
-      setCarteira(response)
-    }
-    ).catch();
-    
-  }, [qtdPauloCoin]);
-  
-  useEffect(()=>{
-    setTotalReais(pauloCoin*qtdPauloCoin);
-  },[qtdPauloCoin]);
-
-  
-
-  const editarCarteira = () => {
-    console.log("carteira",carteira.qtdPauloCoin)
-    console.log(Number(carteira.qtdPauloCoin) + Number(qtdPauloCoin))
-    
-    const soma = valorTeste + Number(qtdPauloCoin)
-    
-
-    const carteiraEditada= {
-   
-      qtdPauloCoin: soma,
-      totalReais: String(totalReais),
-      pauloCoin: idPlc,
-      usuario: idUser
-     
-  }
-
-  console.log("carteira editada", carteiraEditada )
-  console.log("carteira id", carteira.id )
-
-    putCarteira(carteira.id, carteiraEditada).then((response)=>
-    console.log("response", response)
-    ).catch();
-
-    setQtdPauloCoin("");
-     
-}
-
 
   return (
     <>
       <div className="main">
-        <Header pages={["", "", "none", "", "", "none"]} />
+        <Header page="comprar-plc"/>
         <img className="imgFundo" src={fundo} alt="" />
         <div className="container container-comprarplc">
           <div className="row row-comprarplc">
             <div className="col col-box col-preco">
-              <div id="valorplc-comprarplc" className="box">
-                <div className="valorplc-comprarplc-a">
-                  <div className="valorplc-comprarplc-aa">$PLC</div>
-                  <div className="valorplc-comprarplc-ab">data hoje</div>
-                </div>
-                <div className="valorplc-comprarplc-b">0,00000</div>
-                <div className="valorplc-comprarplc-c">+2.302.55 (12,3%)^ hoje</div>
-              </div>
+              <CotacaoPLC />
             </div>
             <div className="col col-box col-comprar">
-              <div id="comprar-comprarplc" className="box">
-                <div>Quanto deseja comprar?</div>
-                <form className="form-comprarplc">
-                  <div className="comprar-comprarplc-a">
-                  <label>$PLC</label>
-                    <input className="form-control comprar-input" placeholder="Unidades" value={qtdPauloCoin} onChange={(e) => setQtdPauloCoin(e.target.value)}/>
-                  </div>
-                  <div className="comprar-comprarplc-b">
-                    <label>TOTAL</label>
-                    <input className="form-control comprar-input" placeholder="Reais" value={totalReais}/>
-                  </div>
-                  <div className="comprar-comprarplc-c">
-                    <button type="button" className="btn-box btn-comprarplc" onClick={editarCarteira }>Comprar</button>
-                  </div>
-                </form>
-              </div>
+              <CompraPLC />
             </div>
           </div>
           <div className="row row-comprarplc">
@@ -107,7 +30,7 @@ const ComprarPLC = () => {
               <img className="srStonks srStonks-comprarplc" src={SrStonks} alt="" />
             </div>
             <div className="col col-box col-grafico">
-              <div className="box">tem um grafico aqui</div>
+              <GraficoPLC />
             </div>
           </div>
         </div>

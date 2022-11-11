@@ -3,7 +3,7 @@
     position: absolute;
     width: 100%;
     display: grid;
-    grid-template-columns:repeat(5, min-content) 1fr repeat(2, min-content);
+    grid-template-columns:repeat(6, min-content) 1fr repeat(2, min-content);
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
@@ -22,10 +22,18 @@
     color: white;
     font-weight: bold;
     padding: 0 10px 0 10px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 2px;
     
 }
 
-.header-nav:hover{
+.black {
+    color: black;
+}
+
+.header-navlink:hover{
     color: white;
 }
 

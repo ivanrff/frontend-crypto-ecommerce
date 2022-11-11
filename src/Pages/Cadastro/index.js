@@ -11,7 +11,7 @@ const Cadastro = () => {
     return (
         <>  
                 <div className="main">
-                <Header pages={["","","","","",""]}/>
+                <Header page="cadastro"/>
                 <img className="imgFundo" src={fundo} alt=""/>
                 <div className="container">
                     <div className="rowHome row">

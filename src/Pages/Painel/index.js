@@ -8,7 +8,7 @@ const Painel = () => {
   return (
     <>
       <div className="main">
-        <Header pages={["","none","","","","none"]} />
+        <Header page="painel" />
         <img className="imgFundo" src={fundo} alt="" />
         <div className="container">
           <div className="rowHome row">
