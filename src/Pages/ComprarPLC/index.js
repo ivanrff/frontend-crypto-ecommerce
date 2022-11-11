@@ -10,22 +10,27 @@ import { getPauloCoin } from "../../Componentes/Service/ServicePauloCoin";
 
 const ComprarPLC = () => {
 
-  const [qtdPauloCoin, setQtdPauloCoin] = useState(0);
+  const [qtdPauloCoin, setQtdPauloCoin] = useState("");
   const [totalReais, setTotalReais] = useState(0);
   const [carteira, setCarteira] = useState("");
-  const [pauloCoin, setPauloCoin] = useState(0)
-  const [idPlc, setIdPlc] = useState({"id": 1})
+  const [pauloCoin, setPauloCoin] = useState(0);
+  //acertar os id´s, transformar tudo pra automatico após o acesso com senha e login 
+  const [idPlc, setIdPlc] = useState({"id": 1});
+  const [idUser, setIdUser] = useState({"id": 14});
+  const [valorTeste, setValorTeste] = useState("")
 
   //resolver o problema do id fixo tanto para buscar de carteira por usuario, quanto para busca de paulo coin por id
   useEffect(() => {
     getPauloCoin(1).then((response)=> 
     setPauloCoin(response.precoReal)
     ).catch()
-    getCarteiraByUsuarioId(7).then((response)=>
-    setCarteira(response)
+    getCarteiraByUsuarioId(14).then((response)=>{
+      setValorTeste(response.qtdPauloCoin)
+      setCarteira(response)
+    }
     ).catch();
     
-  }, []);
+  }, [qtdPauloCoin]);
   
   useEffect(()=>{
     setTotalReais(pauloCoin*qtdPauloCoin);
@@ -34,17 +39,27 @@ const ComprarPLC = () => {
   
 
   const editarCarteira = () => {
-
-    console.log(carteira.qtdPauloCoin + qtdPauloCoin)
+    console.log("carteira",carteira.qtdPauloCoin)
+    console.log(Number(carteira.qtdPauloCoin) + Number(qtdPauloCoin))
+    
+    const soma = valorTeste + Number(qtdPauloCoin)
+    
 
     const carteiraEditada= {
    
-      qtdPauloCoin: (carteira.qtdPauloCoin + qtdPauloCoin),
+      qtdPauloCoin: soma,
       totalReais: String(totalReais),
-      pauloCoin: idPlc
+      pauloCoin: idPlc,
+      usuario: idUser
      
   }
-    putCarteira(carteira.id, carteiraEditada)
+
+  console.log("carteira editada", carteiraEditada )
+  console.log("carteira id", carteira.id )
+
+    putCarteira(carteira.id, carteiraEditada).then((response)=>
+    console.log("response", response)
+    ).catch();
 
     setQtdPauloCoin("");
      
