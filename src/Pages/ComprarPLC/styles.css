@@ -22,7 +22,7 @@
     justify-content: space-between;
 }
 
-.valorplc-comprarplc-c-verde, .valorplc-comprarplc-c-verm, .valorplc-comprarplc-b {
+.valorplc-comprarplc-c, .valorplc-comprarplc-b {
     display: flex;
     justify-content: flex-end;
 }
@@ -35,6 +35,9 @@
 }
 .valorplc-comprarplc-c-verm {
     color: red;
+}
+.valorplc-comprarplc-c-preto {
+    color: black;
 }
 
 #valorplc-comprarplc {
