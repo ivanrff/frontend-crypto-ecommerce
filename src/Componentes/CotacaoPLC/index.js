@@ -11,25 +11,23 @@ const CotacaoPLC = ({pauloCoin, plc }) => {
 
     const data = new Date();
     setHoje(data.toLocaleDateString())
-    atlz()
     
-   },[])
+    if((pauloCoin.precoReal - plc.precoReal)<=0){
+        setCorCotacao("valorplc-comprarplc-c-verde")
+         }else{
+        setCorCotacao("valorplc-comprarplc-c-verm")
+        console.log((pauloCoin.precoReal - plc.precoReal))
+         }
+    
+   },[pauloCoin, plc])
 
    const dif = (pauloCoin.precoReal - plc.precoReal).toFixed(2);
    const cont = Math.abs(((pauloCoin.precoReal - plc.precoReal)*100/plc.precoReal).toFixed(2));
    const contFinal = String(cont).replace(".", ",");
    const plCoin = String(pauloCoin.precoReal).replace(".", ",");
 
-       
-   
-   const atlz = ()=> {
-       if((pauloCoin.precoReal - plc.precoReal)>=0){
-           setCorCotacao("valorplc-comprarplc-c-verde")
-    }else{
-        setCorCotacao("valorplc-comprarplc-c-verm")
-        console.log((pauloCoin.precoReal - plc.precoReal))
-        }
-   }
+   console.log("plc",plCoin)
+
 
     return (
         <>
