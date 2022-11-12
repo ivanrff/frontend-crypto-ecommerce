@@ -13,7 +13,7 @@ const CompraPLC = () => {
     //acertar os id´s, transformar tudo pra automatico após o acesso com senha e login 
     const [idPlc, setIdPlc] = useState({ "id": 1 });
     const [idUser, setIdUser] = useState({ "id": 14 });
-    const [valorTeste, setValorTeste] = useState("")
+    
 
     //resolver o problema do id fixo tanto para buscar de carteira por usuario, quanto para busca de paulo coin por id
     useEffect(() => {
@@ -21,41 +21,27 @@ const CompraPLC = () => {
             setPauloCoin(response.precoReal)
         ).catch()
         getCarteiraByUsuarioId(14).then((response) => {
-            setValorTeste(response.qtdPauloCoin)
+            
             setCarteira(response)
         }
         ).catch();
-
-    }, [qtdPauloCoin]);
-
-    useEffect(() => {
         setTotalReais(pauloCoin * qtdPauloCoin);
-    }, [qtdPauloCoin]);
 
+    }, [qtdPauloCoin]);
 
 
     const editarCarteira = () => {
-        console.log("carteira", carteira.qtdPauloCoin)
-        console.log(Number(carteira.qtdPauloCoin) + Number(qtdPauloCoin))
-
-        const soma = valorTeste + Number(qtdPauloCoin)
-
-
+        
+        
         const carteiraEditada = {
 
-            qtdPauloCoin: soma,
+            qtdPauloCoin: carteira.qtdPauloCoin + Number(qtdPauloCoin),
             totalReais: String(totalReais),
             pauloCoin: idPlc,
             usuario: idUser
 
         }
-
-        console.log("carteira editada", carteiraEditada)
-        console.log("carteira id", carteira.id)
-
-        putCarteira(carteira.id, carteiraEditada).then((response) =>
-            console.log("response", response)
-        ).catch();
+        putCarteira(carteira.id, carteiraEditada).then().catch();
 
         setQtdPauloCoin("");
 

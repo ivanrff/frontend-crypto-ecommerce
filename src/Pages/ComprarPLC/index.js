@@ -4,12 +4,32 @@ import Header from "../../Componentes/Header";
 import fundo from "../../imagens/fundo.jpg";
 import SrStonks from "../../imagens/SrStonks.png";
 import "./styles.css";
-
 import CotacaoPLC from "../../Componentes/CotacaoPLC";
 import CompraPLC from "../../Componentes/CompraPLC";
 import GraficoPLC from "../../Componentes/GraficoPLC";
+import { getPauloCoin } from "../../Componentes/Service/ServicePauloCoin";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const ComprarPLC = () => {
+
+  const [pauloCoin, setPauloCoin] = useState("");
+  const [plc, setPlc] = useState("");
+
+
+  useEffect(() => {
+    getPauloCoin(1).then((response) =>{
+      console.log(response)
+        setPauloCoin(response)
+     } ).catch();
+
+     getPauloCoin(3).then((response) =>{
+      console.log(response)
+        setPlc(response)
+     } ).catch();
+
+}, []);
+
 
   return (
     <>
@@ -19,10 +39,10 @@ const ComprarPLC = () => {
         <div className="container container-comprarplc">
           <div className="row row-comprarplc">
             <div className="col col-box col-preco">
-              <CotacaoPLC />
+              <CotacaoPLC pauloCoin = {pauloCoin} plc = {plc} />
             </div>
             <div className="col col-box col-comprar">
-              <CompraPLC />
+              <CompraPLC/>
             </div>
           </div>
           <div className="row row-comprarplc">
