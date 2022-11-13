@@ -1,7 +1,7 @@
 import CartaoCarteira from "../../Componentes/CartaoCarteira";
+import CarteiraPainel from "../../Componentes/CarteiraPainel";
 import Footer from "../../Componentes/Footer";
 import Header from "../../Componentes/Header";
-import SaldoCarteira from "../../Componentes/SaldoCarteira";
 import fundo from "../../imagens/fundo.jpg";
 import SrStonks from "../../imagens/SrStonks.png";
 
@@ -16,7 +16,7 @@ const Carteira = () => {
         <div className="container-carteira">
           
           <div className="col-box col-box-carteira">
-            <SaldoCarteira />
+            <CarteiraPainel/>
             <CartaoCarteira />
           </div>
         </div>

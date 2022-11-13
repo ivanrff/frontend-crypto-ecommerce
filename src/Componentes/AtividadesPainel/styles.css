@@ -1,0 +1,30 @@
+#resumo-historico {
+    grid-template-rows: min-content min-content min-content min-content;
+    padding: 10px 15px 10px 15px;
+    margin-top: 50px;
+}
+
+#resumo-historico-exibirtudo {
+    display: flex;
+    justify-content: flex-end;
+}
+.resumo-atividades {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background-color: aliceblue;
+    margin: 10px 0 10px 0;
+    padding: 5px 10px 5px 10px;
+    border-radius: 0.8em;
+    width: 150px;
+}
+.resumo-qtd {
+    justify-self: end;
+    margin-bottom: 5px;
+}
+.grid-resumo-atividades {
+    display: flex;
+}
+.coluna1-resumo-atividades {
+    margin-right: 10px;
+}

@@ -18,8 +18,13 @@
     flex-direction: column;
 }
 .valorplc-comprarplc-a {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    /* $PLC (espaço no meio) <data de hoje> */
+    grid-template-columns: min-content 150px min-content;
+}
+
+.valorplc-comprarplc-ab {
+    grid-column: 3/3;
 }
 
 .valorplc-comprarplc-c, .valorplc-comprarplc-b {
@@ -40,9 +45,8 @@
     color: black;
 }
 
-#valorplc-comprarplc {
-    width: 100%;
-}
+
+
 .comprar-comprarplc-a, .comprar-comprarplc-b {
     display: flex;
     flex-direction: row;

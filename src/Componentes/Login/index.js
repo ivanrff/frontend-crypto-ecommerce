@@ -39,7 +39,7 @@ const Login = () => {
               </Link>
               <div class="row mb-4 text-end ">
                  <div class="col ">
-                  <a className="recSenha" href="#!">Recuperar senha</a>
+                  <Link to="" className="recSenha"><u>Recuperar</u> <u>senha</u></Link>
                 </div>
               </div>
 

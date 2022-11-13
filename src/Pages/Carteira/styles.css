@@ -13,18 +13,10 @@
     width: 50vw;
     justify-content: center;
 }
-.box-carteira-saldo, .box-carteira-cartao {
+.box-carteira-cartao {
+    width: 300px;
     margin: 0;
-}
-.box-carteira-saldo > .item-a {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.box-carteira-saldo > .item-b {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    margin-top: 50px;
 }
 @media (max-width:645px) {
     .col-box-carteira { width: 100% }
