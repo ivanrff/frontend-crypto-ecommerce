@@ -21,7 +21,6 @@ const CompraPLC = () => {
             setPauloCoin(response.precoReal)
         ).catch()
         getCarteiraByUsuarioId(14).then((response) => {
-            
             setCarteira(response)
         }
         ).catch();
@@ -36,7 +35,7 @@ const CompraPLC = () => {
         const carteiraEditada = {
 
             qtdPauloCoin: carteira.qtdPauloCoin + Number(qtdPauloCoin),
-            totalReais: String(totalReais),
+            totalReais: (carteira.qtdPauloCoin + Number(qtdPauloCoin))*pauloCoin,
             pauloCoin: idPlc,
             usuario: idUser
 
