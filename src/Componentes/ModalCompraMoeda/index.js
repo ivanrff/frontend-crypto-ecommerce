@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import "./styles.css"
 
-const ModalCompraMoeda = ({moeda, carteira, editarCarteira, qtdPlcMoeda, setQtdPlcMoeda, pauloCoin}) => {
+const ModalCompraMoeda = ({moeda, carteira, editarCarteira, qtdPlcMoeda, setQtdPlcMoeda, pauloCoin, setRetirada}) => {
 
   const [show, setShow] = useState(false);
 
@@ -26,13 +26,13 @@ const ModalCompraMoeda = ({moeda, carteira, editarCarteira, qtdPlcMoeda, setQtdP
         <div className="container">
           <div className="row">
             <div className="col">
-              <input className='mt-4' type="number" placeholder='Ex: 15' value={qtdPlcMoeda} onChange={(e)=> setQtdPlcMoeda(e.target.value) }/>
+              <input className='mt-4' type="number" placeholder='Ex: 15' />
             </div>
             <div className="col">
               <label htmlFor="">Total $PLC antes da compra</label>
               <input type="text" disabled value={"$PLC "+ carteira.qtdPauloCoin}/>
               <label htmlFor="">Total $PLC após a compra</label>
-              <input type="text" value={"$PLC "+ carteira.qtdPauloCoin - qtdPlcMoeda*pauloCoin } disabled />
+              <input type="text" value={"$PLC "}   disabled />
             </div>
           </div>
         </div>

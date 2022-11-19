@@ -1,5 +1,5 @@
 import ModalCompraMoeda from "../ModalCompraMoeda";
-const CardMoeda = ({moeda, carteira, editarCarteira, qtdPlcMoeda, setQtdPlcMoeda, pauloCoin})=> {
+const CardMoeda = ({moeda, carteira, editarCarteira, qtdPlcMoeda, setQtdPlcMoeda, pauloCoin, setRetirada})=> {
     return(
         <>
         <div className="container">
@@ -11,8 +11,10 @@ const CardMoeda = ({moeda, carteira, editarCarteira, qtdPlcMoeda, setQtdPlcMoeda
                 <div className="col">{moeda.minDiario}</div>
                 <div className="col">{moeda.open}</div>
                 <div className="col">{moeda.close}</div>
-                <div className="col"><ModalCompraMoeda moeda= {moeda} carteira = {carteira} editarCarteira={editarCarteira}
-                qtdPlcMoeda={qtdPlcMoeda} setQtdPlcMoeda={setQtdPlcMoeda} pauloCoin={pauloCoin}/></div>
+                <div className="col"><ModalCompraMoeda moeda= {moeda} carteira = {carteira} 
+                // editarCarteira={editarCarteira}
+                // qtdPlcMoeda={qtdPlcMoeda} setQtdPlcMoeda={setQtdPlcMoeda} pauloCoin={pauloCoin} setRetirada={setRetirada}
+                /></div>
             </div>
         </div>
 

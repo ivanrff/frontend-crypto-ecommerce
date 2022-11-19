@@ -13,18 +13,24 @@ const ListaMoedasCambio = () => {
   const [idPlc, setIdPlc] = useState({ "id": 1 });
   const [idUser, setIdUser] = useState({ "id": 14 });
   const [pauloCoin, setPauloCoin] = useState(0);
-  const [qtdPlcMoeda, setQtdPlcMoeda] = useState("");
+  const [qtdPlcMoeda, setQtdPlcMoeda] = useState(0);
+  const [retirada, setRetirada] = useState(0)
+
+  //Não ta atualizando a carteira insta na hora que abre o código, entender o prq isso ta acontecendi
+  //Passar o código de atlz carteira esta sendo problematico, então comentei momentaneamente
+  
+
+  useEffect (()=>{
+    getMoeda().then(response => {
+        setMoedas(response)
+        
+      }).catch()
+  },[])
 
   useEffect (()=>{
     getCarteiraByUsuarioId(14).then(response => {
         console.log(response)
         setCarteira(response)
-      }).catch()
-  },[])
-
-  useEffect (()=>{
-    getMoeda().then(response => {
-        setMoedas(response)
       }).catch()
   },[])
 
@@ -35,22 +41,22 @@ const ListaMoedasCambio = () => {
 
 }, []);
 
-  const editarCarteira = (retirada)=> {
-//multiplicar preço plc pelo input
-//retirada é = preçoBTC*quantidade da moeda inpputada
+//   const editarCarteira = ( )=> {
+// //multiplicar preço plc pelo input
+// //retirada é = preçoBTC*quantidade da moeda inpputada
 
-    const carteiraEditada = {
+//     const carteiraEditada = {
 
-      qtdPauloCoin: carteira.qtdPauloCoin - retirada,
-      totalReais: (carteira.qtdPauloCoin - retirada)*pauloCoin,
-      pauloCoin: { "id": 1 },
-      usuario: { "id": 14 }
+//       qtdPauloCoin: carteira.qtdPauloCoin - retirada,
+//       totalReais: (carteira.qtdPauloCoin - retirada)*pauloCoin,
+//       pauloCoin: { "id": 1 },
+//       usuario: { "id": 14 }
 
-  }
-  putCarteira(carteira.id, carteiraEditada).then().catch();
+//   }
+//   putCarteira(carteira.id, carteiraEditada).then().catch();
 
-  setQtdPlcMoeda("");
-    }
+//   setQtdPlcMoeda("");
+//     }
 
 
   return (
@@ -71,8 +77,10 @@ const ListaMoedasCambio = () => {
         </div>
         <div className="moedas-cambio">
           <div className="moeda-row">
-            {moedas.map((moeda)=> <CardMoeda key={moeda.id} moeda={moeda} carteira = {carteira} editarCarteira={editarCarteira}
-            qtdPlcMoeda={qtdPlcMoeda} setQtdPlcMoeda={setQtdPlcMoeda} pauloCoin={pauloCoin}/> )}
+            {moedas.map((moeda)=> <CardMoeda key={moeda.id} moeda={moeda} carteira = {carteira} 
+            // editarCarteira={editarCarteira}
+            // qtdPlcMoeda={qtdPlcMoeda} setQtdPlcMoeda={setQtdPlcMoeda} pauloCoin={pauloCoin} setRetirada={setRetirada}
+            /> )}
           </div>
         </div>
       </div>
